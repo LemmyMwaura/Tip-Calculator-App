@@ -38,7 +38,7 @@ body {
   gap: 2rem;
   background-color: var(--White);
   padding: 2rem;
-  width: 45vw;
+  width: 55vw;
   border-radius: 10px;
   margin-top: -14rem;
 }
@@ -81,7 +81,7 @@ body {
 }
 
 .container .content .input input:focus {
-  border: none;
+  outline: 2px solid var(--Strong-cyan);
 }
 
 .container .content .input input::placeholder {
@@ -145,7 +145,7 @@ body {
 }
 
 .container .content .input .item2 .btns .special:focus {
-  border: 1px solid var(--Strong-cyan);
+  outline: 2px solid var(--Strong-cyan);
 }
 
 .container .content .output-card {
@@ -194,6 +194,70 @@ body {
 .container .content .output-card button:active {
   background-color: var(--Strong-cyan);
   color: var(--Very-dark-cyan);
+}
+
+@media only screen and (max-width: 960px) {
+  .container img {
+    width: 6vw;
+  }
+  .container .content {
+    width: 75vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container img {
+    width: 10vw;
+  }
+  .container .content {
+    width: 80vw;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .container .content {
+    width: 90vw;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .container {
+    place-items: end;
+  }
+  .container img {
+    position: absolute;
+    width: 16vw;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .container .content {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+  }
+  .container .content .input {
+    width: 100%;
+    height: 60%;
+  }
+  .container .content .input .item2 .btns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 7px;
+  }
+  .container .content .output-card {
+    width: 100%;
+    height: 50%;
+  }
+}
+
+@media only screen and (max-width: 376px) {
+  .container .content .input .item2 .btns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 7px;
+  }
 }
 
 .attribution {
