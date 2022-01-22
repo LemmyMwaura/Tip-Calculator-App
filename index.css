@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+:root {
+  --Strong-cyan: hsl(172, 67%, 45%);
+  --Very-dark-cyan: hsl(183, 100%, 15%);
+  --Dark-grayish-cyan: hsl(186, 14%, 43%);
+  --Dark2-grayish-cyan: hsl(184, 14%, 56%);
+  --Light-grayish-cyan: hsl(185, 41%, 84%);
+  --Light2-grayish-cyan: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Space Mono', monospace;
+}
+
+body {
+  overflow-y: hidden;
+  font-family: 'Space Mono', monospace;
+  background-color: var(--Light-grayish-cyan);
+}
+
+.container {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+
+.container .content {
+  display: flex;
+  gap: 2rem;
+  background-color: var(--White);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.container .content .input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.container .content .input h4 {
+  font-size: 0.7rem;
+  margin-bottom: 5px;
+  color: var(--Dark-grayish-cyan);
+}
+
+.container .content .input input {
+  border: none;
+  padding: 0.2rem 0.2rem;
+  border: none;
+  padding: 0.5rem 0.2rem;
+  background-color: var(--Light2-grayish-cyan);
+  border-radius: 2px;
+  color: var(--Strong-cyan);
+  width: 100%;
+}
+
+.container .content .input input::placeholder {
+  text-align: right;
+  font-family: 'Space Mono', sans-serif;
+}
+
+.container .content .input .item1, .container .content .input .item2, .container .content .input .item3 {
+  margin-bottom: 1.3rem;
+}
+
+.container .content .input .item2 .btns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 7px;
+}
+
+.container .content .input .item2 .btns button {
+  padding: 0.2rem 0.7rem;
+  color: var(--White);
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  background-color: var(--Very-dark-cyan);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.container .content .input .item2 .btns .special {
+  background-color: var(--Light2-grayish-cyan);
+  color: var(--Dark-grayish-cyan);
+  font-size: 1rem;
+}
+
+.container .content .output-card {
+  background-color: var(--Very-dark-cyan);
+  width: 17rem;
+  padding: 1.6rem 1.4rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container .content .output-card .output-wrapper .output {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container .content .output-card .output-wrapper .output h6 {
+  color: var(--White);
+}
+
+.container .content .output-card .output-wrapper .output h6 span {
+  color: var(--Dark-grayish-cyan);
+}
+
+.container .content .output-card .output-wrapper .output h4 {
+  font-size: 2rem;
+  color: var(--Strong-cyan);
+}
+
+.container .content .output-card button {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  padding: 0.5rem 0.1rem;
+  color: var(--Dark-grayish-cyan);
+  background-color: var(--Dark2-grayish-cyan);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+/*# sourceMappingURL=index.css.map */
