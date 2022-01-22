@@ -40,7 +40,7 @@ body {
   padding: 2rem;
   width: 45vw;
   border-radius: 10px;
-  margin-top: -12rem;
+  margin-top: -14rem;
 }
 
 .container .content .input {
@@ -48,7 +48,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  width: 50%;
+  width: 48%;
 }
 
 .container .content .input h4 {
@@ -62,13 +62,32 @@ body {
   padding: 0.5rem 0.2rem;
   background-color: var(--Light2-grayish-cyan);
   border-radius: 4px;
-  color: var(--Strong-cyan);
+  color: var(--Very-dark-cyan);
+  font-weight: 700;
+  font-size: 1rem;
   width: 100%;
+  text-align: right;
+  cursor: pointer;
+}
+
+.container .content .input input::-webkit-inner-spin-button,
+.container .content .input input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin-left: 3px;
+}
+
+.container .content .input input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.container .content .input input:focus {
+  border: none;
 }
 
 .container .content .input input::placeholder {
   text-align: right;
   font-family: 'Space Mono', sans-serif;
+  font-size: 1rem;
 }
 
 .container .content .input .item1, .container .content .input .item2, .container .content .input .item3 {
@@ -78,14 +97,14 @@ body {
 .container .content .input .item1 input {
   background: url(./images/icon-dollar.svg);
   background-position: 5%;
-  background-size: 3%;
+  background-size: 3.5%;
   background-repeat: no-repeat;
 }
 
 .container .content .input .item3 input {
   background: url(./images/icon-person.svg);
   background-position: 5%;
-  background-size: 3%;
+  background-size: 3.5%;
   background-repeat: no-repeat;
 }
 
@@ -104,17 +123,34 @@ body {
   background-color: var(--Very-dark-cyan);
   font-weight: 700;
   font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.container .content .input .item2 .btns button:active {
+  background-color: var(--Strong-cyan);
+  color: var(--Very-dark-cyan);
 }
 
 .container .content .input .item2 .btns .special {
   background-color: var(--Light2-grayish-cyan);
   color: var(--Dark-grayish-cyan);
   font-size: 1rem;
+  font-weight: 700;
+  text-align: right;
+  color: var(--Very-dark-cyan);
+}
+
+.container .content .input .item2 .btns .special::placeholder {
+  text-align: center;
+}
+
+.container .content .input .item2 .btns .special:focus {
+  border: 1px solid var(--Strong-cyan);
 }
 
 .container .content .output-card {
   background-color: var(--Very-dark-cyan);
-  width: 50%;
+  width: 52%;
   padding: 1.6rem 1.4rem;
   border-radius: 10px;
   display: flex;
@@ -152,6 +188,12 @@ body {
   color: var(--Dark-grayish-cyan);
   font-weight: 700;
   background-color: #11656a;
+  cursor: pointer;
+}
+
+.container .content .output-card button:active {
+  background-color: var(--Strong-cyan);
+  color: var(--Very-dark-cyan);
 }
 
 .attribution {
