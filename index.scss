@@ -18,7 +18,6 @@
 }
 
 body{
-    overflow-y: hidden;
     font-family: 'Space Mono', monospace;
     background-color: var(--Light-grayish-cyan);
 }
@@ -27,7 +26,7 @@ body{
     display: grid;
     place-items: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 95vh;
 
     img{
         width: 4.5vw;
@@ -240,6 +239,7 @@ body{
 @media only screen and (max-width: 576px) {
    .container{
     place-items: end;
+    min-height: 100vh;
 
     img{
         position: absolute;
@@ -290,8 +290,6 @@ body{
     }
    } 
 }
-
-
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
