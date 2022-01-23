@@ -152,6 +152,10 @@ body {
   outline: 2px solid var(--Strong-cyan);
 }
 
+.container .content .input .item2 .btns .special.active {
+  outline: 2px solid var(--Strong-cyan);
+}
+
 .container .content .output-card {
   background-color: var(--Very-dark-cyan);
   width: 52%;

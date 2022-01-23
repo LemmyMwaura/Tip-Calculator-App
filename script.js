@@ -50,20 +50,23 @@ const calctotal = () => {
 
 const calctip = () => {
     if (custom.value == null || custom.value == 0) {
+        custom.classList.remove('active')
         btns.forEach((btn) => {
-            btn.classList.remove('active')
+            // btn.classList.remove('active')
 
             btn.addEventListener("click", (e) => {
-                if(e.target.dataset.btnValue == btn.dataset.btnValue) {
-                    btn.classList.add('active');
-                }
-
+                btn.classList.add('active')
+                if(e.target.dataset.btnValue != btn.dataset.btnValue) {btn.classList.remove('active')};
+                
                 tipPerson.textContent = (
                     ((btn.dataset.btnValue * (parseInt(bill.value) / people.value)) / 100).toFixed(2)
                 )
             })
         })
     } else {
+        if (custom.value != 0){
+            custom.classList.add('active')
+        }
         btns.forEach( (btn) => {
             btn.classList.remove('active')
         })
