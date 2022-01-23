@@ -130,12 +130,17 @@ body {
   color: var(--Very-dark-cyan);
 }
 
+.container .content .input .item2 .btns button.active {
+  background-color: var(--Strong-cyan);
+  color: var(--Very-dark-cyan);
+}
+
 .container .content .input .item2 .btns .special {
   background-color: var(--Light2-grayish-cyan);
   color: var(--Dark-grayish-cyan);
   font-size: 1rem;
   font-weight: 700;
-  text-align: right;
+  text-align: center;
   color: var(--Very-dark-cyan);
 }
 

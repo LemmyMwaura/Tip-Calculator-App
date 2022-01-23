@@ -7,43 +7,44 @@
   
   <title>Frontend Mentor | Tip calculator app</title>
   <link rel="stylesheet" href="index.css">
+  <script defer src="script.js"></script> 
 </head>
 <body>
   <main>
         <div class="container">
             <img src="./images/logo.svg" alt="">
             <div class="content">
-                <div class="input">
+                <form class="input" id="form" >
                     <div class="item1">
                         <h4>Bill</h4>
-                        <input type="number" placeholder="0" id="bill">
+                        <input type="text" placeholder="0" required id="bill">
                     </div>
                     <div class="item2">
                         <h4> Select Tip %</h4>
                         <div class="btns">
-                          <button>5%</button>
-                          <button>10%</button>
-                          <button>15%</button>
-                          <button>25%</button>
-                          <button>50%</button>
+                          <button data-btn-value="5">5%</button>
+                          <button data-btn-value="10">10%</button>
+                          <button data-btn-value="15">15%</button>
+                          <button data-btn-value="25">25%</button>
+                          <button data-btn-value="50">50%</button>
                           <input class="special" type="number" placeholder="Custom" >
-                      </div>
+                        </div>
                     </div>
                     <div class="item3">
                         <h4>Number of People</h4>
-                        <input type="number" placeholder="0" id="people">
+                        <input type="number" placeholder="0" required id="people">
                     </div>
-              </div>
+                  </form>
 
                 <div class="output-card">
                   <div class="output-wrapper">
                       <div class="output">
                         <h6>Tip Amount <br><span>/ person</span></h6>
-                        <h4>$0.00</h4>
+                        <h4 class="tip-person">$0.00</h4>
                       </div>
                       <div class="output">
                           <h6>Total <br><span>/ person</span></h6>
-                          <h4>$0.00</h4>
+                          <h4 class="total-person">$0.00</h4>
                       </div>
                   </div>
                 
@@ -52,11 +53,6 @@
             </div>
         </div>
   </main>
-
-
-  
-
-
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
