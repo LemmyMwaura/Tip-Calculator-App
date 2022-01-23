@@ -5,6 +5,7 @@ const form = document.getElementById("form")
 const tipPerson = document.querySelector(".tip-person")
 const totalPerson = document.querySelector(".total-person")
 const custom = document.querySelector('.special')
+const reset = document.getElementById('reset')
 
 bill.addEventListener( 'input', () => {
     if(people.value == null || people.value == 0 || bill.value == 0 ) {
@@ -52,11 +53,11 @@ const calctip = () => {
     if (custom.value == null || custom.value == 0) {
         custom.classList.remove('active')
         btns.forEach((btn) => {
-            // btn.classList.remove('active')
+            btn.classList.remove('active')
 
             btn.addEventListener("click", (e) => {
                 btn.classList.add('active')
-                if(e.target.dataset.btnValue != btn.dataset.btnValue) {btn.classList.remove('active')};
+                // if(e.target.dataset.btnValue != btn.dataset.btnValue) {btn.classList.remove('active')};
                 
                 tipPerson.textContent = (
                     ((btn.dataset.btnValue * (parseInt(bill.value) / people.value)) / 100).toFixed(2)
@@ -75,3 +76,15 @@ const calctip = () => {
             )
     }
 }
+
+reset.addEventListener('click', () => {
+    bill.value = ''
+    people.value = ''
+    btns.forEach((btn) => {
+        btn.classList.remove('active')
+    })
+    custom.value = ''
+    custom.classList.remove('active')
+    tipPerson.textContent = '$0.00'
+    totalPerson.textContent = '$0.00'
+})
