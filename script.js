@@ -9,7 +9,7 @@ const custom = document.querySelector('.special')
 const reset = document.getElementById('reset')
 
 bill.addEventListener( 'input', () => {
-    if(bill.value == null || people.value == 0 ) {
+    if(bill.value == null || bill.value == 0 || people.value == 0 ) {
         totalPerson.textContent = "$0.00"
         tipPerson.textContent = "$0.00"
      return
@@ -54,9 +54,7 @@ const calctotal = () => {
         return
     }
     let tip = tipPerson.textContent.replace('$', ' ')
-    let total = ((parseFloat(bill.value) / people.value) + parseFloat(tip))
-
-    totalPerson.textContent =   "$" + (total.toFixed(2))
+    totalPerson.textContent =   "$" + ((parseFloat(bill.value) / people.value) + parseFloat(tip)).toFixed(2)
 }
 
 const calctip = () => {
