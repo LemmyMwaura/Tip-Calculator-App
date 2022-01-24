@@ -70,14 +70,14 @@ const calctip = () => {
 
     if (custom.value == null || custom.value == 0) {
         custom.classList.remove('active')
-        btns.forEach((btn, event) => {
+        btns.forEach((btn) => {
             btn.classList.remove('active')
-            btn.addEventListener("click", (e) => {   
+            btn.addEventListener("click", (e) => { 
+                if (e.target.textContent == btn.textContent) btn.classList.add('active');
                 if(people.value == 0) {
                     calctip()
                     return
                 }  
-                btn.classList.add('active');
                 tipPerson.textContent = (
                     "$" + ((btn.dataset.btnValue * (parseFloat(bill.value) / people.value)) / 100).toFixed(2)
                 )
