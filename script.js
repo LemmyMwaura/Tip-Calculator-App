@@ -54,7 +54,7 @@ const calctotal = () => {
         return
     }
     let tip = tipPerson.textContent.replace('$', ' ')
-    let total = ((parseInt(bill.value) / people.value) + parseInt(tip))
+    let total = ((parseFloat(bill.value) / people.value) + parseFloat(tip))
 
     totalPerson.textContent =   "$" + (total.toFixed(2))
 }
@@ -72,18 +72,16 @@ const calctip = () => {
 
     if (custom.value == null || custom.value == 0) {
         custom.classList.remove('active')
-        btns.forEach((btn) => {
+        btns.forEach((btn, event) => {
             btn.classList.remove('active')
-            btn.addEventListener("click", (e) => { 
+            btn.addEventListener("click", (e) => {   
                 if(people.value == 0) {
                     calctip()
                     return
-                }    
-                btn.classList.add('active')
-                if(e.target.dataset.btnValue != btn.dataset.btnValue) {btn.classList.remove('active')};
-                
+                }  
+                btn.classList.add('active');
                 tipPerson.textContent = (
-                    "$" + ((btn.dataset.btnValue * (parseInt(bill.value) / people.value)) / 100).toFixed(2)
+                    "$" + ((btn.dataset.btnValue * (parseFloat(bill.value) / people.value)) / 100).toFixed(2)
                 )
             })
         })
@@ -102,7 +100,7 @@ const calctip = () => {
             btn.classList.remove('active')
         })
         tipPerson.textContent = (
-                "$" + ((custom.value * (parseInt(bill.value) / people.value)) / 100).toFixed(2)
+                "$" + ((custom.value * (parseFloat(bill.value) / people.value)) / 100).toFixed(2)
             )
     }
 }
