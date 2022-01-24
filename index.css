@@ -100,11 +100,32 @@ body {
   background-repeat: no-repeat;
 }
 
+.container .content .input .item3 {
+  position: relative;
+}
+
 .container .content .input .item3 input {
   background: url(./images/icon-person.svg);
   background-position: 5%;
   background-size: 3.5%;
   background-repeat: no-repeat;
+}
+
+.container .content .input .item3 .people-label {
+  position: absolute;
+  font-size: 0.7rem;
+  right: 0rem;
+  top: 0;
+  color: red;
+  opacity: 0;
+}
+
+.container .content .input .item3 .people-label.danger {
+  opacity: 1;
+}
+
+.container .content .input .item3 input.danger {
+  outline: 1.5px solid red;
 }
 
 .container .content .input .item2 .btns {

@@ -102,11 +102,30 @@ body{
             }
 
             .item3{
+                position: relative;
+
                 input{
                     background: url(./images/icon-person.svg);
                     background-position: 5%;
                     background-size: 3.5%;
                     background-repeat: no-repeat;
+                }
+                
+                .people-label{
+                    position: absolute;
+                    font-size: 0.7rem;
+                    right: 0rem;
+                    top: 0;
+                    color: red;
+                    opacity: 0;
+                }
+
+                .people-label.danger{
+                    opacity: 1;
+                }
+
+                input.danger{
+                    outline: 1.5px solid red;
                 }
             }
 
